@@ -1,0 +1,34 @@
+
+<h1>Restaurant form</h1>
+<div style="background-color:rgb(136, 136, 245);">
+
+  <form [formGroup]="restaurantForm" (ngSubmit)="save()" >
+    <div>
+      Restaurant Name  <input type="text" formControlName="restaurnatName"/>
+  </div><br>
+  
+  <div>
+       Food items  <input type="text" formControlName="items"/>
+  </div><br>
+  <div>
+    <div>
+        Image <input type="text" formControlName="image"/>
+        </div><br>
+      City<input type="text" formControlName="city"/>
+  </div><br>
+  <div>
+    State<input type="text" formControlName="state"/>
+</div><br>
+<div>
+    Area<input type="text" formControlName="area"/>
+</div><br>
+  <div>
+  Pin code <input type="text" formControlName="pincode"/>
+  </div><br>
+
+  <input type="submit" value="save order"/>
+  </form>
+  <hr>
+  {{restaurants|json}}
+  </div>
+
